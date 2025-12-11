@@ -1,22 +1,22 @@
 
 import { Dropdown as PRDropDown } from 'primereact/dropdown';
-        
+import { useState } from 'react';        
 
-export default function Dropdown({options, onChange, value}) {
+export default function Dropdown({options, value}) {
 
+    const [selectedValue, setSelectedValue] = useState(value);
 
     return(
         <div>
             <h3 className='Example-Header'>Dropdown Component</h3>
             <PRDropDown 
-                value={value} 
-                onChange={onChange} 
+                value={selectedValue} 
+                onChange={(e) => setSelectedValue(e.value)} 
                 options={options} 
-                optionLabel="gender" 
+                optionLabel='name'
                 placeholder="Select a Gender"
-                className="w-full md:w-20rem" 
+                className="w-full md:w-14rem" 
                 checkmark={true}  
-                highlightOnSelect={true}
                 /> 
         </div>
     );

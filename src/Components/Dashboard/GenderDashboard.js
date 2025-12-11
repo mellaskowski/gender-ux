@@ -17,9 +17,8 @@ export default function GenderDashboard({props}) {
       ];
 
     return(
-        <div>
+        <div className='Example-container'>
             <Dropdown options={genderOptions}
-             onChange={(e) => setSelectedGender(e.value)} 
              value={selectedGender} 
              />
         </div>
