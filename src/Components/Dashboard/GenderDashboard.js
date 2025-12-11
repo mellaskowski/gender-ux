@@ -1,6 +1,7 @@
 import { Chips } from 'primereact/chips';
 import Dropdown from '../Dropdown';
 import { useState } from 'react';
+import GenderCheckbox from '../GenderCheckbox';
 
 export default function GenderDashboard({props}) {
     
@@ -15,12 +16,15 @@ export default function GenderDashboard({props}) {
       ];
 
     return(
-        <div className='Example-Container'>
-            <Dropdown options={genderOptions}
-     
-             />
-        </div>
-            
-      
+        <div>
+            <div className='Example-Container'>
+                <Dropdown options={genderOptions}
+
+                />
+            </div>
+            <div className='Example-Container'>
+                <GenderCheckbox options={genderOptions} />
+            </div>
+      </div>
     );
 }
