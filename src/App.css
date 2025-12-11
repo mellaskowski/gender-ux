@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 80vh;
@@ -37,11 +31,13 @@
 
 .Example-Container {
   margin-bottom: 20px;
-  /* padding-block: calc(); */
+  align-items: center;
+  flex-direction: column;
+  display: flex;
 }
 
 .Example-Header {
-  float: left;
+  align-self: flex-start;
   font-size: large;
   margin-bottom: 10px;
 }
