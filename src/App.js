@@ -2,6 +2,7 @@ import './App.css';
 import GenderEmoji from './Components/GenderEmoji';
 import Dropdown from './Components/Dropdown';
 import { useState } from 'react';
+import GenderDashboard from './Components/Dashboard/GenderDashboard';
 
 function App() {
 
@@ -31,10 +32,11 @@ function App() {
           <p>Please select your gender from the options below, or specify your own. </p>
           <p>Never feel obligated to fill out this field on our or anyone's form. Your gender identity is fully yours.</p>
       </header>
-      <body>
+      <div className='Dashboard-container'>
         <h2>Review and Use the examples for Gender Selection in Forms below</h2>
-        <Dropdown options={genderOptions} onChange={setSelectedGender} />
-      </body>
+        <GenderDashboard />
+      </div>
+        
     </div>
   );
 }
