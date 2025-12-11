@@ -18,7 +18,10 @@ export default function GenderDashboard({props}) {
 
     return(
         <div>
-            <Dropdown options={genderOptions} onChange={setSelectedGender} value={selectedGender} />
+            <Dropdown options={genderOptions}
+             onChange={(e) => setSelectedGender(e.value)} 
+             value={selectedGender} 
+             />
         </div>
             
       
