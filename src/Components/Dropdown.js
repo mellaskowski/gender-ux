@@ -2,9 +2,9 @@
 import { Dropdown as PRDropDown } from 'primereact/dropdown';
 import { useState } from 'react';        
 
-export default function Dropdown({options, value}) {
+export default function Dropdown({options}) {
 
-    const [selectedValue, setSelectedValue] = useState(value);
+    const [selectedValue, setSelectedValue] = useState(null);
 
     return(
         <div>

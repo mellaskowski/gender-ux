@@ -3,8 +3,6 @@ import Dropdown from '../Dropdown';
 import { useState } from 'react';
 
 export default function GenderDashboard({props}) {
-
-      const [selectedGender, setSelectedGender] = useState(null);
     
       const genderOptions = [
         { name: 'Man', code: 'M' },
@@ -17,9 +15,9 @@ export default function GenderDashboard({props}) {
       ];
 
     return(
-        <div className='Example-container'>
+        <div className='Example-Container'>
             <Dropdown options={genderOptions}
-             value={selectedGender} 
+     
              />
         </div>
             
