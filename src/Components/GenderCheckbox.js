@@ -15,20 +15,25 @@ export default function GenderCheckbox({options, category}) {
     };
 
     return(
-        <div className="card flex justify-content-center">
+        <div className="card">
                                         <h2>{category} ?   </h2>
 
             <div className="flex flex-column gap-8">
                 {options.map((option) => {
                     return (
-                        <div>
-                            <div key={option.key} className="flex align-items-center">
-                                <Checkbox inputId={option.key} name="option" value={option} onChange={onOptionChange} checked={selectedOptions.some((item) => item.key === option.key)} />
+                       
+                            <span key={option.key} className="checkbox-label">
+                                <Checkbox 
+                                    inputId={option.key}
+                                    name="option" 
+                                    value={option} 
+                                    onChange={onOptionChange} 
+                                    />
                                 <label htmlFor={option.key} className="ml-2">
                                     {option.name}
                                 </label>
-                            </div>
-                        </div>
+                            </span>
+                       
                     );
                 })}
             </div>
