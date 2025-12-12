@@ -6,13 +6,13 @@ import GenderCheckbox from '../GenderCheckbox';
 export default function GenderDashboard({props}) {
     
       const genderOptions = [
-        { name: 'Man', code: 'M' },
-        { name: 'Woman', code: 'F' },
-        { name: 'Non-binary', code: 'NB' },
-        { name: 'Agender', code: 'A' },
-        { name: 'Genderqueer', code: 'GQ' },
-        { name: 'Prefer not to say', code: 'PNTS' },
-        { name: 'Other', code: 'O' }
+        { name: 'Man', code: 'M', key: 0 },
+        { name: 'Woman', code: 'F', key: 1 },
+        { name: 'Non-binary', code: 'NB', key: 2 },
+        { name: 'Agender', code: 'A', key: 3 },
+        { name: 'Genderqueer', code: 'GQ', key: 4 },
+        { name: 'Prefer not to say', code: 'PNTS', key: 5 },
+        { name: 'Other', code: 'O', key: 6 }
       ];
 
     return(
@@ -23,7 +23,7 @@ export default function GenderDashboard({props}) {
                 />
             </div>
             <div className='Example-Container'>
-                <GenderCheckbox options={genderOptions} />
+                <GenderCheckbox options={genderOptions} category={"you've got a gender ?"}/>
             </div>
       </div>
     );
